@@ -1,0 +1,26 @@
+
+{% load lower2 %}
+
+<h3>Hello {{ name|lower2|capfirst }}.</h3>
+<h3>Hello {{ name|lower2 }}.</h3>
+
+{% if b %}
+	<p>b is True</p>
+{% else %}
+	<p>b is False</p>
+{% endif %}
+
+<ul type="square">
+{% for x in l %}
+<li style="color:{% cycle 'red' 'black' %};">
+	{{ x }}, this was item <b>{{ forloop.counter }}</b>
+</li>
+{% endfor %}
+</ul>
+
+{% ifequal name "morten" %}
+<p>The name was equal 'morten'</p>
+{% endifequal %}
+
+{% now "r" %}
+

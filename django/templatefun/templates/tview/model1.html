@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html>
+<head>
+<title>model1</title>
+
+<style type="text/css">
+
+table {
+	border: 1px solid #000;
+}
+
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+thead, tfoot {
+	background-color: #5b5b5b;
+	color: #fff;
+}
+
+tr.black {
+	color: #000;
+	background-color: #e0e0ff;
+}
+
+tr.white {
+	color: #000;
+	background-color: #eee;
+}
+
+</style>
+
+</head>
+<body>
+
+<table>
+	<thead>
+		<tr><td>Name</td><td>Description</td></tr>
+	</thead>
+
+	<tbody>
+		{% for course in courses %}
+		<tr class="{% cycle 'black' 'white' %}">
+			<td>{{ course.name }}</td>
+			<td>{{ course.description }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+
+	<tfoot>
+		<tr><td>Name</td><td>Description</td></tr>
+	</tfoot>
+</table>
+
+<br/>
+
+<a href="/add/">Add new course record</a>
+
+</body>
+</html>
+

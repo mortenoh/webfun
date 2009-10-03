@@ -1,0 +1,45 @@
+
+<html>
+<head>
+	<title>Add new record</title>
+
+	<style type="text/css">
+	
+	table {
+		border: 1px solid #000;
+		padding: 3px;
+		margin: 50px;
+	}
+
+	tr {
+		text-align: right;
+	}
+
+	</style>
+</head>
+
+<body>
+
+<form method="post">
+	<table>
+		{% if f.errors %}
+		<tr>
+			<td style="border: 3px solid red;background-color:blue;color:white;" colspan="2">
+				Please correct error{{ f.errors|pluralize }} below.
+			</td>
+		</tr>
+		{% endif %}
+		{{ f.as_table }}
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="Add"/>
+			</td>
+		</tr>
+	</table>
+</form>
+
+<a href="/">List all records</a>
+
+</body>
+</html>
+
