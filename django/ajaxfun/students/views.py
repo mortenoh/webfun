@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 
 from models import Student
+from lxml import etree
 import json
 
 def index(request):
@@ -17,6 +18,7 @@ def count_json(request):
 	return HttpResponse(json.dumps(n), mimetype="application/json")
 
 def count_xml(request):
-	n = '<count>%s</count>' % (Student.objects.all().count())
-	return HttpResponse(n, mimetype="application/xml")
+	root = etree.Element("count")
+	root.text = "%s" % Student.objects.all().count()
+	return HttpResponse(etree.tostring(root), mimetype="application/xml")
 
