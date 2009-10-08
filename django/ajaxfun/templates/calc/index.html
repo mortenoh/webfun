@@ -1,0 +1,34 @@
+<html>
+
+<head>
+	<title>Ajax counter</title>
+	<script type="text/javascript" src="/media/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript">
+		function send_eval_request(text) {
+			$.post('/calc/eval/', {'text' : text}, function(data) {
+				$('#evaluated').html(data)
+			})
+		}
+
+		$(document).ready(function() {
+			$('#postdata').click(function() {
+				send_eval_request($('#eval').val())
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<p>
+		<h2>
+			<span id="evaluated">What do you want to evaluate?</span>
+		</h2>
+	</p>
+	<p>
+		<input type="text" id="eval"/><br/>
+		<input type="submit" id='postdata' value="Post data to /calc/eval/"/>
+	</p>
+</body>
+
+</html>
+
