@@ -38,10 +38,32 @@
 			})
 		}
 
+		function check_username(username) {
+			$.post('/students/check/', {'username' : username}, function(data) {
+				$('#checked').html(data);
+			})
+		}
+
 		$(document).ready(function() {
 //			update_plaintext(); var iv = setInterval(update_plaintext, 1000);
-//			update_json(); var iv = setInterval(update_json, 1000);
-			update_xml(); var iv = setInterval(update_xml, 1000);
+//			update_xml(); var iv = setInterval(update_xml, 1000);
+			update_json(); var iv = setInterval(update_json, 1000);
+
+			$('#submit').click(function() {
+				check_username( $('#username').val() );
+			})
+
+			$('#bshow1').click(function() {
+				if($('#show1').is(':hidden')) {
+					$('#show1').fadeIn('slow');
+				} else {
+					$('#show1').fadeOut('slow');
+				}
+			})
+
+			$('#bshow2').click(function() {
+				$('#show1').slideToggle('slow');
+			})
 		})
 	</script>
 </head>
@@ -50,6 +72,30 @@
 	<h2>Registered Students</h2>
 	<p>
 		<span id="nid">0</span>
+	</p>
+	<h2>Check db for a username</h2>
+	<h3 id="checked">Please enter a username...</h3>
+	<p>
+		<input type="text" id="username"/>
+		<input type="submit" id="submit" value="Check username"/>
+	</p>
+	<p>
+		<input type="submit" id="bshow1" value="hide/show"/>
+		<input type="submit" id="bshow2" value="slide toggle"/>
+	</p>
+	<p id="show1">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante justo. Cras accumsan 
+		egestas porta. Sed eget dolor magna. Donec at leo et purus feugiat lobortis. Quisque ut ipsum auctor 
+		lectus interdum ullamcorper. Aenean ac pharetra metus. Phasellus sed leo in tellus vulputate semper. 
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante justo. Cras accumsan 
+		egestas porta. Sed eget dolor magna. Donec at leo et purus feugiat lobortis. Quisque ut ipsum auctor 
+		lectus interdum ullamcorper. Aenean ac pharetra metus. Phasellus sed leo in tellus vulputate semper. 
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante justo. Cras accumsan 
+		egestas porta. Sed eget dolor magna. Donec at leo et purus feugiat lobortis. Quisque ut ipsum auctor 
+		lectus interdum ullamcorper. Aenean ac pharetra metus. Phasellus sed leo in tellus vulputate semper. 
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ante justo. Cras accumsan 
+		egestas porta. Sed eget dolor magna. Donec at leo et purus feugiat lobortis. Quisque ut ipsum auctor 
+		lectus interdum ullamcorper. Aenean ac pharetra metus. Phasellus sed leo in tellus vulputate semper. 
 	</p>
 </body>
 
