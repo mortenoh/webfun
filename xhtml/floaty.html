@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CSS-Float</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+#wrapper {
+	margin: 6em auto;
+	border: 1px solid #000;
+	width: 450px;
+	height: 450px;
+}
+
+#wrapper .red_block {
+	background-color: #f00;
+	color: #fff;
+	border: 1px solid #111;
+	width: 148px;
+	height: 148px;
+	text-align: center;
+	font-size: 9em;
+}
+
+#one {
+	float: right; 
+}
+
+#two {
+	float: right;
+}
+
+#three {
+	clear: both;
+}
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div class="red_block" id="one">1</div>
+	<div class="red_block" id="two">2</div>
+	<div class="red_block" id="three">3</div>
+</div>
+
+</body>
+</html>

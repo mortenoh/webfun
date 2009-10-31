@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CSS-ImageFlip</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+#wrapper {
+	margin: 6em auto;
+	padding: 5px;
+	width: 800px;
+	border: 1px solid #555;
+}
+
+a.flip_one {
+	display: block;
+	width: 150px;
+	height: 44px;
+	background-image: url(webvamp.png);
+}
+
+a.flip_one:hover {
+	background-position: -150px 0px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<a class="flip_one" href="one.html"></a>
+</div>
+
+</body>
+</html>
