@@ -14,7 +14,7 @@
 }
 
 html {
-	overflow-y: scroll;
+
 }
 
 #wrapper {
@@ -36,22 +36,27 @@ html {
 }
 
 #one {
+/*
 	position: fixed;
-	top: 20;
-	left: 20;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
+*/
 }
 
 #two {
 	position: absolute;
-	top: 30;
-	left: 30;
+ 	z-index: 0;
+	top: 30px;
+	left: 30px;
 }
 
 #three {
-	position: absolute;
-	top: 90;
-	left: 90;
-	z-index: -1;
+	position: fixed;
+	top: 50px;
+	left: 50px;
+
+ 	z-index: 2;
 }
 </style>
 
@@ -59,7 +64,7 @@ html {
 <body>
 
 <div id="wrapper">
-	<div class="red_block" id="one">1</div>
+<!--	<div class="red_block" id="one">1</div> -->
 	<div class="red_block" id="two">2</div>
 	<div class="red_block" id="three">3</div>
 </div>
