@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#wrapper").css("color", "#0f0f0f");
+		$(".wrappers").css("font-size", "2em");
+		$("body").css("background-color", "#f0f0f0");
+		
+		$("#wrapper").hover(function() {
+			$("#wrapper").addClass("big_red");
+			$("#wrapper").data("old", $("#wrapper").text());
+			$("#wrapper").html("BIG RED!");
+		}, function() {
+			$("#wrapper").removeClass("big_red");
+			$("#wrapper").text($("#wrapper").data("old"));
+		});
+
+		$("#2p p").text(
+			$("#2p p").text()
+		);
+		
+		$("#2p").css({
+			'background-color' : '#000',
+			'color' : '#fff',
+		});
+
+		$("#ppp").css("margin", "10px")		
+		$("#ppp").bind("mouseenter", function() {
+			$("#ppp").data("oldbg", $("#ppp").css("background-color"));
+			$("#ppp").css("background-color", "red");
+		});
+
+		$("#ppp").bind("mouseleave", function() {
+			$("#ppp").css("background-color", $("#ppp").data("oldbg"));
+		});
+	});
+</script>
+
+<style type="text/css">
+* { padding: 0; margin: 0; }
+html { overflow-y: scroll; }
+
+div.big_red {
+	font-size: 5em !important;
+	background-color: #aaa; 
+	color: red !important;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper" class="wrappers">
+	hello
+</div>
+
+<div id="2p">
+	<p>paragraph #1</p>
+	<p>paragraph #2</p>
+</div>
+
+<p id="ppp">
+	This is a paragraph with the name "ppp"
+</p>
+
+</body>
+</html>

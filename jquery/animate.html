@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#box1").bind("click", function() {
+			$("#box1").animate({
+				"height" : "300px",
+				"width" : "300px",
+			});
+		});
+	});
+</script>
+
+<style type="text/css">
+* { padding: 0; margin: 0; }
+html { overflow-y: scroll; }
+
+body {
+	margin: 3em auto;
+	width: 80%;
+}
+
+#box1 {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	background-color: #eee;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper" class="wrappers">
+
+	<div id="box1"></div>
+
+</div>
+
+</body>
+</html>

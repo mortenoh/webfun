@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#box").bind("mousemove", function(e) {
+			if(e.clientX) {
+				var cx = e.clientX;
+			} else {
+				var cx = 0;
+			}
+
+			if(e.clientY) {
+				var cy = e.clientY;
+			} else {
+				var cy = 0;
+			}
+
+			if(e.pageX) {
+				var px = e.pageY;
+			} else {
+				var px = 0;
+			}
+
+			if(e.pageY) {
+				var py = e.pageY;
+			} else {
+				var py = 0;
+			}
+			
+			var text = "cx: " + cx + ", cy: " + cy +
+				"<br/>px: " + px + ", py: " + py;
+			
+			$("#info").html(text);
+		});
+		
+		$("#box").mousemove();
+		$("#info").hide();
+
+		$("#box").hover(function() {
+			$("#info").slideDown("normal");
+		}, function() {
+			$("#info").slideUp("fast");
+		});
+
+		
+	});
+</script>
+
+<style type="text/css">
+* { padding: 0; margin: 0; }
+html { overflow-y: scroll; }
+
+body {
+	background-color: #fefefe;
+}
+
+#wrapper {
+	margin: 3em auto;
+	width: 60%;
+}
+
+#box {
+	height: 400px;
+	width: 500px;
+	margin: 30px;
+	border: 4px solid #1f434d;
+	-webkit-border-radius: 10px;
+	background-color: #2f6675;
+}
+
+#box:hover {
+	background-color: #4390a6;
+	cursor: crosshair;
+}
+
+#info {
+	padding: 10px;
+	width: 150px;
+	background-color: #60a1da;
+	color: #fff;
+	border: 2px solid #45759e;
+	-webkit-border-radius: 5px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="wrapper" class="wrappers">
+	<div id="box"></div>
+	<div id="info"></div>
+</div>
+
+</body>
+</html>
