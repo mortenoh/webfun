@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jQueryUI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link type="text/css" href="css/themes/base/ui.all.css" rel="stylesheet" />
+<style type="text/css">
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+
+body {
+	margin: 2em auto;
+	padding: 20px;
+	border: 1px solid #000;
+	width: 80%;
+}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#datePicker").datepicker();
+		$("#accordion").accordion();
+		$("#dialog").dialog();
+		$("#progressbar").progressbar({ value: 37 });
+		$("#slider").slider();
+		$("#tabs").tabs();
+	});
+</script>
+
+</head>
+<body>
+
+<div id="pageWrap">
+
+	<div id="slider"></div><br/>
+	<div id="progressbar"></div><br/>
+	<div id="dialog" title="This is a dialog"></div><br/>
+	<div id="datePicker"></div><br/>
+
+	<div id="tabs">
+	    <ul>
+	        <li><a href="#fragment-1"><span>One</span></a></li>
+	        <li><a href="#fragment-2"><span>Two</span></a></li>
+	        <li><a href="#fragment-3"><span>Three</span></a></li>
+	    </ul>
+	    <div id="fragment-1">
+	        <p>First tab is active by default:</p>
+	        <pre><code>$('#example').tabs();</code></pre>
+	    </div>
+	    <div id="fragment-2">
+	        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	    </div>
+	    <div id="fragment-3">
+	        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+	    </div>
+	</div><br/>
+
+	<div id="accordion">
+		<h3><a href="#">Section 1</a></h3>
+		<div>
+			<p>
+			Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+			ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+			amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+			odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+			</p>
+		</div>
+		<h3><a href="#">Section 2</a></h3>
+		<div>
+			<p>
+			Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+			purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+			velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+			suscipit faucibus urna.
+			</p>
+		</div>
+		<h3><a href="#">Section 3</a></h3>
+		<div>
+			<p>
+			Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+			Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+			ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+			lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+			</p>
+			<ul>
+				<li>List item one</li>
+				<li>List item two</li>
+				<li>List item three</li>
+			</ul>
+		</div>
+		<h3><a href="#">Section 4</a></h3>
+		<div>
+			<p>
+			Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+			et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+			faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+			mauris vel est.
+			</p>
+			<p>
+			Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+			inceptos himenaeos.
+			</p>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
