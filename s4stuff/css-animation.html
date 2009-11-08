@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>S3 CSS-Animations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<style type="text/css">
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+
+#wrapper {
+	margin: 3em auto;
+	overflow: hidden;
+	width: 80%;
+	height: 600px;
+	position: relative;
+	background: black;
+}
+
+@-webkit-keyframes move_rose {
+	from	{	left: 1400px;	}
+	40%		{	left: 1400px;	}
+	to		{	left: -1400px;	}
+}
+
+#rose {
+	position: absolute;
+	left: 1400px;
+	top: 200px;
+
+	-webkit-animation: move_rose 10s infinite linear;
+
+/*	-webkit-animation-name: move_rose;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear; */
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<img src="yellow-rose-transparent-isolated.png" id="rose"></img>
+</div>
+
+</body>
+</html>

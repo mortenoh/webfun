@@ -11,7 +11,7 @@
 * { margin: 0; padding: 0; }
 html { overflow-y: scroll; }
 
-#pagewrap {
+#wrapper {
 	margin: 20px;
 	font-size: 4em;
 }
@@ -79,18 +79,37 @@ html { overflow-y: scroll; }
 		from(red), to(green),
 		color-stop(0.5, blue));
 }
+
+#boxshadow {
+	height: 50px;
+	border: 2px solid black;
+	background-color: #eef;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-webkit-box-shadow: 5px 5px 10px gray;
+}
+
+#rounded {
+	height: 50px;
+	border: 2px solid black;
+	background-color: #eef;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+}
 </style>
 
 </head>
 <body>
 
-<div id="pagewrap">
+<div id="wrapper">
 	<div id="fontface">This is a custom font.</div>
 	<div id="textstroke">Stroked.</div>
 	<div id="rgba">Text with alpha channel.</div>
 	<div id="textshadow">Shadows are cool.</div>
 	<div id="container"><div id="imageborder"></div></div>
 	<div id="gradient"></div>
+	<div id="container"><div id="boxshadow"></div></div>
+	<div id="container"><div id="rounded"></div></div>
 </div>
 
 </body>
