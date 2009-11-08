@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CSS Transitions</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+<style type="text/css">
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+
+body {
+	background: black;
+}
+
+#wrapper {
+	margin: 3em auto;
+	width: 60%;
+	color: white;
+}
+
+#box1 {
+	font-size: 2em;
+	-webkit-transition-property: 
+		font-size,
+		color,
+		background-color;
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-delay: 0s;
+
+	/* ease, ease-in, ease-out, ease-in-out, linear */
+	-webkit-transition-timing-function: linear;
+
+}
+
+#box1:hover {
+	color: black;
+	background-color: white;
+	font-size: 4em;
+}
+
+#menucontainer {
+	margin-top: 30px;
+}
+
+#menucontainer ul li {
+	display: inline;
+	list-style: none;
+	padding: 5px 6px 2px 6px;
+	font-size: 1.4em;
+	background-color: blue;
+	color: white;
+}
+
+#menucontainer ul li:hover {
+	border-top: 2px solid white;
+	padding-top: 8px;
+	background-color: lime;
+	color: black;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: linear;
+	cursor: pointer;
+}
+
+#menubody {
+	background-color: blue;
+	height: 200px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="box1">Lame example of -webkit-transition.</div>
+	<div id="menucontainer">
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+		</ul>
+		<div id="menubody">
+		
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

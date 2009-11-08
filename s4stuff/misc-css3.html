@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Misc S4-CSS3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	
+<style type="text/css">
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+
+#pagewrap {
+	margin: 20px;
+	font-size: 4em;
+}
+
+@font-face {
+	font-family: NoteThis;
+	src: url('Note_this.ttf');
+}
+
+#container {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
+}
+
+#fontface {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
+	font-family: 'NoteThis', 'sans-serif';
+}
+
+#textstroke {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
+	font-size: 1.5em;
+	/* -webkit-text-stroke: stroke_size stroke_color */
+	-webkit-text-stroke: 3px red;
+}
+
+#rgba {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
+	background-image: url('blue009.jpg');
+	/* color: rgba(r, g, b, alpha) */
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-text-stroke: 1px black;
+}
+
+#textshadow {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
+	/* text-shadow: color x-off y-off blur_radius */
+	text-shadow: #000 1px 1px 4px;
+	background-color: red;
+	color: white;
+}
+
+#imageborder {
+	padding: 40px;
+	border: 10px solid black;
+	/* http://www.lrbabe.com/sdoms/borderImage/index.html */
+	-webkit-border-image: url(border.png) 20 20 20 20 stretch;
+}
+
+#gradient {
+	margin: 20px 0 20px 20px;
+	padding: 40px;
+	border-bottom: 2px solid black;
+	background-image: -webkit-gradient(linear,
+		left top, right top,
+		from(red), to(green),
+		color-stop(0.5, blue));
+}
+</style>
+
+</head>
+<body>
+
+<div id="pagewrap">
+	<div id="fontface">This is a custom font.</div>
+	<div id="textstroke">Stroked.</div>
+	<div id="rgba">Text with alpha channel.</div>
+	<div id="textshadow">Shadows are cool.</div>
+	<div id="container"><div id="imageborder"></div></div>
+	<div id="gradient"></div>
+</div>
+
+</body>
+</html>
