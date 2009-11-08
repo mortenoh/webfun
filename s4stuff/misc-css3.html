@@ -13,18 +13,18 @@ html { overflow-y: scroll; }
 
 #wrapper {
 	margin: 20px;
-	font-size: 4em;
+	font-size: 4.2em;
+}
+
+.container {
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	border-bottom: 2px solid black;
 }
 
 @font-face {
 	font-family: NoteThis;
 	src: url('Note_this.ttf');
-}
-
-#container {
-	margin: 20px 0 20px 20px;
-	padding: 20px;
-	border-bottom: 2px solid black;
 }
 
 #fontface {
@@ -40,7 +40,7 @@ html { overflow-y: scroll; }
 	border-bottom: 2px solid black;
 	font-size: 1.5em;
 	/* -webkit-text-stroke: stroke_size stroke_color */
-	-webkit-text-stroke: 3px red;
+	-webkit-text-stroke: 2px red;
 }
 
 #rgba {
@@ -81,7 +81,7 @@ html { overflow-y: scroll; }
 }
 
 #boxshadow {
-	height: 50px;
+	height: 100px;
 	border: 2px solid black;
 	background-color: #eef;
 	-webkit-border-top-left-radius: 15px;
@@ -90,7 +90,7 @@ html { overflow-y: scroll; }
 }
 
 #rounded {
-	height: 50px;
+	height: 100px;
 	border: 2px solid black;
 	background-color: #eef;
 	-webkit-border-top-left-radius: 15px;
@@ -106,10 +106,10 @@ html { overflow-y: scroll; }
 	<div id="textstroke">Stroked.</div>
 	<div id="rgba">Text with alpha channel.</div>
 	<div id="textshadow">Shadows are cool.</div>
-	<div id="container"><div id="imageborder"></div></div>
+	<div class="container"><div id="imageborder"></div></div>
 	<div id="gradient"></div>
-	<div id="container"><div id="boxshadow"></div></div>
-	<div id="container"><div id="rounded"></div></div>
+	<div class="container"><div id="boxshadow"></div></div>
+	<div class="container"><div id="rounded"></div></div>
 </div>
 
 </body>
