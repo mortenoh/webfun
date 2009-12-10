@@ -32,3 +32,16 @@ class Student(models.Model):
 	class Meta:
 		ordering = ['last_name', 'first_name']
 
+class Node(models.Model):
+	name = models.CharField(max_length=32)
+	parent = models.ForeignKey('self', blank=True, null=True)
+
+	def __unicode__(self):
+		return self.name
+
+	def full_path(self):
+		if self.parent == None:
+			return self.name
+		else:
+			return self.parent.full_path() + "." + self.name
+

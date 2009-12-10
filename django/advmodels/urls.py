@@ -1,7 +1,7 @@
 
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from models1.models import Student, Course
+from models1.models import Student, Course, Node
 
 
 class StudentAdmin(admin.ModelAdmin):
@@ -14,10 +14,13 @@ class CourseAdmin(admin.ModelAdmin):
 	list_display = ('name', 'display_name', 'last_updated')
 	search_fields = ['name', 'display_name']
 
+class NodeAdmin(admin.ModelAdmin):
+	list_display = ('name', 'full_path')
 
 admin.autodiscover()
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Course, CourseAdmin)
+admin.site.register(Node, NodeAdmin)
 
 urlpatterns = patterns('',
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
