@@ -1,0 +1,30 @@
+
+<html>
+
+<head>
+	
+<script type="text/javascript">
+var draw = function() {
+	var d = document.querySelector("#drawing")
+	
+	if(d.getContext) {
+		var ctx = d.getContext("2d")
+
+		ctx.fillStyle = "#ff0000"
+		ctx.fillRect(100, 100, 200, 200)
+	}
+}
+</script>
+	
+</head>
+
+<body onLoad="draw()">
+
+<canvas id="drawing" width="640" height="480" style="border: solid 1px black;">
+	canvas element is not supported in this browser
+</canvas>
+	
+</body>
+	
+
+</html>

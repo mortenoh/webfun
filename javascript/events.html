@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Javascript Events</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="myHeader">Hello World!</h1>
+
+<script>
+
+var h1 = document.querySelector('#myHeader');
+var body = document.querySelector("body")
+
+h1.addEventListener('click', function() { alert('h1'); }, false);
+body.addEventListener('click', function() { alert('body'); }, false)
+
+</script>
+
+</body>
+</html>

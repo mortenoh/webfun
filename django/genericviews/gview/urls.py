@@ -18,4 +18,3 @@ urlpatterns = patterns('gview.views',
 	}),
 	(r'^students/$', list_detail.object_list, student_info),
 )
-

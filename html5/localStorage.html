@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>HTML5 Template</title>
+		<meta charset="utf-8"/>
+
+
+<script>
+	if(localStorage.pageCount) {
+		localStorage.pageCount = Number(localStorage.pageCount) + 1;
+	} else {
+		localStorage.pageCount = 1;
+	}
+
+	document.writeln("<br/>localStorage.pageCount " + localStorage.pageCount);
+
+	if(sessionStorage.pageCount) {
+		sessionStorage.pageCount = Number(sessionStorage.pageCount) + 1;
+	} else {
+		sessionStorage.pageCount = 1;
+	}
+
+	document.writeln("<br/>sessionStorage.pageCount " + sessionStorage.pageCount);
+</script>
+
+<style></style>
+</head>
+
+<body>
+</body>
+</html>
