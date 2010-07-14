@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% block title %} {{ page.title }} {% endblock %}
+
+{% block content %}
+
+{{ page.content }}
+
+<br/><br/>
+{% if number_list %}
+	There are {{ number_list|length }} numbers.
+{% else %}
+	No numbers.
+{% endif %}
+
+<br/>
+{% for item in number_list %}
+<span class='number'>{{ item }}</span>
+{% endfor %}
+
+{% endblock %}
+
