@@ -1,0 +1,7 @@
+
+{
+  "boxes" : [
+    {"id" : "box3", "cls" : "box"},
+    {"id" : "box4", "cls" : "box"}
+  ]
+}

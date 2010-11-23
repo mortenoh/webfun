@@ -1,0 +1,126 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>jQuery #1</title>
+  <meta charset="utf-8"/>
+
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+
+  <script type="text/javascript" src="jquery-1.4.4.js"></script>
+  <script type="text/javascript">
+    $("document").ready(function() {
+      $("div[id*='box']").live("hover", function() {
+        $(this).toggleClass("blue");
+      }, function() {
+        $(this).removeClass("blue");
+      });
+
+      $.get("data1.xml", function(data) {
+        $(data).find("box").each(function() {
+          var newId = $(this).attr("id");
+          var newClass = $(this).attr("class");
+
+          $("#container").append("<div id="
+            + newId + " class=" + newClass + "/>");
+        });
+      });
+
+      $.getJSON("data2.json", function(data) {
+        $.each(data.boxes, function(i, item) {
+          var newId = item.id;
+          var newClass = item.cls;
+
+          $("#container").append("<div id="
+            + newId + " class=" + newClass + "/>");
+        });
+      });
+
+      $.ajax({
+          url : "data2.json",
+          dataType : "json",
+          type : "get",
+          success : function(data, xhr) {
+            data = $.parseJSON(data);
+
+          }
+      });
+    });
+  </script>
+  
+  <style type="text/css">
+    body { background-color: #444; }
+
+    .blue { background-color: #5392e9 !important; }
+
+    #container {
+      margin: 2em auto;
+      width: 800px;
+      height: 480px;
+      border: 2px solid #bbb;
+      background-color: #aaa;
+      -webkit-box-shadow: 2px 2px 2px #333;
+    }
+
+    .box {
+      margin: 20px;
+      width: 150px;
+      height: 150px;
+      background-color: #eee;
+      border: 1px solid #fff;
+      float: left;
+      -webkit-box-shadow: 2px 2px 2px #666;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 100ms;
+      -webkit-transition-timing-function: ease-in;
+    }
+    
+    ul {
+      margin: 1.2em;
+      clear: both;
+      padding: 10px;
+    }
+    
+    ul li {
+      display: inline;
+      background-color: #5392e9;
+      padding: 5px 10px 5px 10px;
+      border-radius: 5px;
+      color: #fff;
+      margin-right: 5px;
+      margin-left: 5px;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 200ms;
+      -webkit-transition-timing-function: ease-in-out;
+      -webkit-box-shadow: 2px 2px 2px #444;
+    }
+
+    ul li:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="container">
+  <ul>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+    <li>Menu</li>
+  </ul>
+
+</div>
+
+</body>
+
+</html>

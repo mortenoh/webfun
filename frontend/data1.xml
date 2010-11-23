@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<boxes>
+  <box class="box" id="box1"/>
+  <box class="box" id="box2"/>
+</boxes>
