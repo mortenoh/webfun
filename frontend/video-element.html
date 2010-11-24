@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Styling of forms</title>
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+  <meta charset="utf-8"/>
+
+  <script type="text/javascript" src="jquery-1.4.4.js"></script>
+  <script type="text/javascript">
+    $("document").ready(function() {
+      $("#play").click(function() {
+        $("video")[0].currentTime = 20;
+        $("video")[0].play();
+      });
+
+      $("#pause").click(function() {
+        $("video")[0].pause();
+      });
+      
+      $("#fullscreen").click(function() {
+        $("video")[0].webkitEnterFullScreen();
+      });      
+    });
+  </script>
+
+  <style type="text/css">
+    body {
+      background-color: #444;
+    }
+
+    #container {
+      margin: 2em auto;
+      width: 800px;
+      height: 480px;
+      border: 2px solid #bbb;
+      background-color: #aaa;
+      -webkit-box-shadow: 2px 2px 2px #333;
+    }
+
+    video {
+      margin: 2em;
+      border: 1px solid black;
+    }
+    
+    ul {
+      margin-left: 2em;
+    }
+    
+    ul li {
+      display: inline;
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    
+    ul li:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+</body>
+
+<div id="container">
+  <video src="video.mp4">
+    Your browser does not support the video element.
+  </video>
+  
+  <ul>
+    <li id="play">Play</li>
+    <li id="pause">Pause</li>
+    <li id="fullscreen">Fullscreen</li>
+  </ul>
+</div>
+
+</html>

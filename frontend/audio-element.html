@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Styling of forms</title>
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+  <meta charset="utf-8"/>
+
+  <script type="text/javascript" src="jquery-1.4.4.js"></script>
+  <script type="text/javascript">
+    $("document").ready(function() {
+      $("#play").click(function() {
+        $("audio")[0].currentTime = 30;
+        $("audio")[0].play();
+      });
+
+      $("#pause").click(function() {
+        $("audio")[0].pause();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    body {
+      background-color: #444;
+    }
+
+    #container {
+      margin: 2em auto;
+      width: 800px;
+      height: 480px;
+      border: 2px solid #bbb;
+      background-color: #aaa;
+      -webkit-box-shadow: 2px 2px 2px #333;
+    }
+    
+    audio {
+      margin: 2em;
+    }
+    
+    .button {
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      padding: 10px;
+      width: 50px;
+      margin: 1.2em;
+    }
+
+    .button:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<meter max="10" min="0"/>
+
+<div id="container">
+  <audio src="audio.mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="play" class="button">Play</div>
+  <div id="pause" class="button">Pause</div>
+</div>
+
+</body>
+</html>
