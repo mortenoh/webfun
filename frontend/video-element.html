@@ -11,7 +11,6 @@
   <script type="text/javascript">
     $("document").ready(function() {
       $("#play").click(function() {
-        $("video")[0].currentTime = 20;
         $("video")[0].play();
       });
 
@@ -42,23 +41,29 @@
     video {
       margin: 2em;
       border: 1px solid black;
+      -webkit-box-shadow: 3px 3px 2px #444;
     }
-    
+
     ul {
       margin-left: 2em;
     }
     
     ul li {
       display: inline;
-      background-color: blue;
-      color: white;
+      background-color: teal;
+      color: #fff;
       border-radius: 5px;
       padding: 10px;
+      -webkit-box-shadow: 2px 2px 2px #444;
+      margin: 0.3em;
+      -webkit-transition-duration: 0.2s;
+      -webkit-transition-property: background-color;
     }
     
     ul li:hover {
-      background-color: black;
+      background-color: #444;
       cursor: pointer;
+      color: #fff;
     }
 
   </style>
@@ -69,7 +74,7 @@
 </body>
 
 <div id="container">
-  <video src="video.mp4">
+  <video src="video.mp4" width="480" height="200" preload="true">
     Your browser does not support the video element.
   </video>
   
