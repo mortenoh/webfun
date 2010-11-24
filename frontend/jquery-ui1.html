@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>jQuery UI #1</title>
+
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+  <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.6.custom.css"/>
+
+  <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#autocomplete").autocomplete({
+        source: ["c++", "java", "php", "coldfusion", "javascript", "asp", 
+            "ruby", "python", "c", "scala", "groovy", "haskell", "perl"]
+      });
+
+      $(".button").button();
+      $("#slider").slider();
+      $("#tabs").tabs();
+      $("#radioset").buttonset();
+    });
+  </script>
+
+  <style type="text/css">
+    body {
+      font: 62.5% sans-serif;
+    }
+
+    #container {
+      margin: 1.2em auto;
+      width: 800px;
+    }
+    
+    .element {
+      margin: 1.2em;
+    }
+    
+    #slider {
+      width: 480px;
+    }
+    
+    #tabs {
+      width: 480px;
+    }
+    
+    .button {
+      margin-bottom: 5px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+    
+    #radioset {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="button" class="element" title="this is a button">Click me!</button>
+<button class="button" class="element" title="this is a button">Click me!</button>
+<button class="button" class="element" title="this is a button">Click me!</button>
+<button class="button" class="element" title="this is a button">Click me!</button>
+
+<div id="radioset">
+  <input type="radio" id="radio1" name="radio" /><label for="radio1">Choice 1</label>
+  <input type="radio" id="radio2" name="radio" checked="checked" /><label for="radio2">Choice 2</label>
+  <input type="radio" id="radio3" name="radio" /><label for="radio3">Choice 3</label>
+</div>
+
+
+<div id="container">
+  <input id="autocomplete" class="element" title="this is the title"/>
+
+  <div id="slider" class="element"></div>
+
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">First</a></li>
+      <li><a href="#tabs-2">Second</a></li>
+      <li><a href="#tabs-3">Third</a></li>
+		</ul>
+
+		<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+		
+		<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+		
+		<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+		</div>
+</div>
+
+</body>
+</html>

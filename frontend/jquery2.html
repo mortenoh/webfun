@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html class="no-js">
+<head>
+  <title>jQuery #1</title>
+  <meta charset="utf-8"/>
+
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+
+  <script type="text/javascript" src="modernizr-1.6.min.js"></script>
+  <script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+  <script type="text/javascript">
+    $("document").ready(function() {
+      if(!Modernizr.webgl) {
+        alert("No WebGL support");
+      }
+    });
+  </script>
+
+  <style type="text/css">
+    body { background-color: #444; }
+
+    #container {
+      margin: 2em auto;
+      width: 800px;
+      height: 480px;
+      border: 2px solid #bbb;
+      background-color: #aaa;
+      -webkit-box-shadow: 2px 2px 2px #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="container">
+
+</div>
+
+</body>
+
+</html>
