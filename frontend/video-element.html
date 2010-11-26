@@ -4,12 +4,34 @@
 
 <head>
   <title>Styling of forms</title>
-  <link rel="stylesheet" type="text/css" href="basic.css"/>
   <meta charset="utf-8"/>
 
+  <link rel="stylesheet" type="text/css" href="basic.css"/>
+  <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.6.custom.css"/>
+
   <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
+
   <script type="text/javascript">
     $("document").ready(function() {
+      $("#play").button();
+      $("#pause").button();
+      $("#fullscreen").button();
+
+      var sliderOptions = {
+        value: 0,
+        min: 0,
+        max: 1000,
+        step: 10,
+        change: function(e, ui) {
+          alert(ui.value);
+        },
+        slider: function(e, ui) {},
+        start: function(e, ui) {},
+        stop: function(e, ui) {}
+      };
+
+      $("#slider").slider(sliderOptions);
       $("#play").click(function() {
         $("video")[0].play();
       });
@@ -44,26 +66,13 @@
       -webkit-box-shadow: 3px 3px 2px #444;
     }
 
-    ul {
+    #controls {
+      margin-top: 2em;
+    }
+    
+    #slider {
+      width: 480px;
       margin-left: 2em;
-    }
-    
-    ul li {
-      display: inline;
-      background-color: teal;
-      color: #fff;
-      border-radius: 5px;
-      padding: 10px;
-      -webkit-box-shadow: 2px 2px 2px #444;
-      margin: 0.3em;
-      -webkit-transition-duration: 0.2s;
-      -webkit-transition-property: background-color;
-    }
-    
-    ul li:hover {
-      background-color: #444;
-      cursor: pointer;
-      color: #fff;
     }
   </style>
 </head>
@@ -77,12 +86,14 @@
     <source src="media/video.mp4" type="video/mp4"/>
     Your browser does not support the video element.
   </video>
-  
-  <ul>
-    <li id="play">Play</li>
-    <li id="pause">Pause</li>
-    <li id="fullscreen">Fullscreen</li>
-  </ul>
+
+  <div id="slider"/>
+
+  <div id="controls">
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="fullscreen">Fullscreen</button>
+  </div>
 </div>
 
 </html>
