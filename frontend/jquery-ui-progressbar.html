@@ -12,14 +12,22 @@
   <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
 
-  <!--[if IE]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]--> 
-
   <script type="text/javascript">
     $("document").ready(function() {
+      $("#pbar1").progressbar({
+        value: 56,
+      });
 
+      $("#pbar2").progressbar({
+        value: 89,
+      });
+
+      $("#pbar3").progressbar({
+        value: 22,
+      });
     });
+    
+    $("#w").draggable();
   </script>
 
   <style type="text/css">
@@ -35,13 +43,26 @@
       background-color: #eee;
       border-radius: 10px;
       -moz-border-radius: 10px;
-    }    
+    }
+
   </style>
 </head>
 
 <body>
 
 <div id="container">
+  <div class="ui-widget" style="width: 400px;" id="w">
+    <div class="ui-widget-header ui-corner-top" style="padding: 5px;">
+      <span class="ui-icon ui-icon-info" style="float: left; margin: -1px 5px 0 0;"></span>
+      Different uses of the jquery-ui-progressbar
+    </div>
+
+    <div class="ui-widget-content ui-corner-bottom" style="padding: 1.5em;">
+      <div id="pbar1"></div>
+      <div id="pbar2" style="margin-top: 1.5em";></div>
+      <div id="pbar3" style="margin-top: 1.5em";></div>
+    </div>
+  </div>
 
 </div>
 

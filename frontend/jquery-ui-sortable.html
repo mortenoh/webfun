@@ -12,13 +12,11 @@
   <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
 
-  <!--[if IE]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]--> 
-
   <script type="text/javascript">
     $("document").ready(function() {
-
+      $("#sortable").sortable({
+        placeholder: "placeholder"
+      });
     });
   </script>
 
@@ -35,13 +33,47 @@
       background-color: #eee;
       border-radius: 10px;
       -moz-border-radius: 10px;
-    }    
+    }
+
+    #sortable {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 306px;
+      height: 306px;
+    }
+    
+    #sortable li {
+      width: 100px;
+      height: 100px;
+      float: left;
+      font-size: 4em;
+      text-align: center;
+      cursor: move;
+    }
+    
+    .placeholder {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed #444;
+    }
   </style>
 </head>
 
 <body>
 
 <div id="container">
+  <ul id="sortable">
+    <li class="ui-state-default">1</li>
+    <li class="ui-state-default">2</li>
+    <li class="ui-state-default">3</li>
+    <li class="ui-state-default">4</li>
+    <li class="ui-state-default">5</li>
+    <li class="ui-state-default">6</li>
+    <li class="ui-state-default">7</li>
+    <li class="ui-state-default">8</li>
+    <li class="ui-state-default">9</li>
+  </ul>
 
 </div>
 
