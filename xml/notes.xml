@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<notes>
+	<note>
+		<to>Morten1</to>
+		<from>Morten2</from>
+		<heading>Husk!</heading>
+		<body>Du må huske dette.</body>
+	</note>
+	<note>
+		<to>Morten3</to>
+		<from>Morten4</from>
+		<heading>Dette må gjøres</heading>
+		<body>kroppen her</body>
+	</note>
+</notes>

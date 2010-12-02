@@ -18,7 +18,40 @@
 
   <script type="text/javascript">
     $("document").ready(function() {
+      var box = $("#box");
+      $("button").button();
+      
+      $("#fadeIn").click(function(e) {
+        box.fadeIn();
+      })
 
+      $("#fadeOut").click(function(e) {
+        box.fadeOut();
+      })
+
+      $("#fadeTo").click(function(e) {
+        box.fadeTo("normal", 0.2);
+        box.fadeTo("normal", 0.4);
+        box.fadeTo("slow", 0.6);
+        box.fadeTo("normal", 0.8);
+        box.fadeTo("fast", 1.0);
+      })
+
+      $("#fadeToggle").click(function(e) {
+        box.fadeToggle();
+      })
+
+      $("#slideUp").click(function(e) {
+        box.slideUp();
+      })
+
+      $("#slideDown").click(function(e) {
+        box.slideDown();
+      })
+
+      $("#slideToggle").click(function(e) {
+        box.slideToggle();
+      })
     });
   </script>
 
@@ -35,6 +68,14 @@
       background-color: #eee;
       border-radius: 10px;
       -moz-border-radius: 10px;
+    }
+    
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      border: 5px solid white;
+      border-radius: 10px;
     }    
   </style>
 </head>
@@ -42,7 +83,18 @@
 <body>
 
 <div id="container">
+  <div id="controls" style="margin-bottom: 0.5em;">
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeTo">fadeTo</button>
+    <button id="fadeToggle">fadeToggle</button>
 
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button>
+  </div>
+
+  <div id="box"></div>
 </div>
 
 </body>
