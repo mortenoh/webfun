@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+
+<start>
+	<element name="notes" >
+		<zeroOrMore>
+			<ref name="note"/>
+		</zeroOrMore>
+	</element>
+</start>
+
+<define name="note">
+	<element name="note">
+		<element name="to"><text/></element>
+		<element name="from"><text/></element>
+		<element name="heading"><text/></element>
+		<element name="body"><text/></element>
+	</element>
+</define>
+
+</grammar>
