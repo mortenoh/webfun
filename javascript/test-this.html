@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+</head>
+<body>
+	<script>
+		Function.prototype.method = function(name, fn) {
+			if(this.prototype[name] == undefined) {
+				this.prototype[name] = fn;
+			}
+			return this;
+		}
+
+		Function.method('inherits', function(Parent) {
+			this.prototype.__proto__ = new Parent();
+			return this;
+		});
+
+		var x = 10;
+		var f = function() {console.log("this(" + this + "): " + this.x);};
+
+		(function() {
+			var x = 33333; // declares x local to this function, does not change global x
+			f.call(this); // this == creator of function, which is window
+		})();
+
+		var T = function(x, y) {
+			this.x = 30;
+			this.y = 40;
+		}.method('f', function() {
+			console.log(this.x);
+			f.call(this);
+		});
+
+		f.call({x:20});
+		f();
+
+		var S = function(x, z) {
+			this.x = 50;
+			this.z = 60;
+		}.inherits(T);
+
+		var s = new S();
+		s.f();
+	</script>
+
+	<script>
+		
+	</script>
+</body>
+</html>
+
